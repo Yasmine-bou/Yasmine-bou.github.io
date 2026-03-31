@@ -1,139 +1,188 @@
 <!DOCTYPE html>
+
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>How COVID-19 changed crime in San Francisco</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 950px;
-            margin: auto;
-            line-height: 1.7;
-            background-color: #f9f9f9;
-            color: #222;
-            padding: 30px 20px;
-        }
-        h1, h2 {
-            color: #2c3e50;
-        }
-        img {
-            width: 100%;
-            margin: 20px 0 10px 0;
-            border-radius: 6px;
-        }
-        iframe {
-            width: 100%;
-            height: 560px;
-            border: none;
-            margin: 20px 0 10px 0;
-            border-radius: 6px;
-            background: white;
-        }
-        .caption {
-            font-size: 0.95em;
-            color: #555;
-            margin-bottom: 28px;
-        }
-        .section {
-            margin-bottom: 40px;
-        }
-    </style>
+
+```
+<title>From drop to redistribution: how COVID-19 reshaped crime patterns in San Francisco</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        max-width: 950px;
+        margin: auto;
+        line-height: 1.7;
+        background-color: #f9f9f9;
+        color: #222;
+        padding: 30px 20px;
+    }
+    h1, h2 {
+        color: #2c3e50;
+    }
+    img {
+        width: 100%;
+        margin: 20px 0 10px 0;
+        border-radius: 6px;
+    }
+    iframe {
+        width: 100%;
+        height: 560px;
+        border: none;
+        margin: 20px 0 10px 0;
+        border-radius: 6px;
+        background: white;
+    }
+    .caption {
+        font-size: 0.95em;
+        color: #555;
+        margin-bottom: 28px;
+    }
+    .section {
+        margin-bottom: 40px;
+    }
+</style>
+```
+
 </head>
+
 <body>
 
-    <h1>How COVID-19 changed crime in San Francisco</h1>
+```
+<h1>From drop to redistribution: how COVID-19 reshaped crime patterns in San Francisco</h1>
 
-    <p>
-        This short data story explores how crime patterns in San Francisco changed before,
-        during, and after the COVID-19 pandemic. Using police incident data, I focus on
-        three crime categories — theft, vehicle theft, and drug offense — and look at how
-        they evolved over time, where they were concentrated, and when they happened during
-        the day.
+<p>
+    When COVID-19 hit in 2020, daily life in cities changed dramatically. Mobility dropped,
+    businesses closed, and public spaces emptied. A natural question follows: what happened
+    to crime?
+</p>
+
+<p>
+    At first glance, one might expect crime to simply decrease. But crime is not one single
+    phenomenon. Different crime categories depend on different opportunities, routines, and
+    forms of public activity. This raises a deeper question: did COVID reduce crime, or did
+    it reshape when, where, and what kind of crime was recorded?
+</p>
+
+<p>
+    In this data story, I use San Francisco police incident data to study how crime evolved
+    before, during, and after the pandemic. I focus on three categories — theft, vehicle theft,
+    and drug offense — and analyze them across three dimensions: long-term trends, geographic
+    concentration, and daily timing patterns.
+</p>
+
+<p>
+    The overall picture is that COVID-19 did not simply lower crime. Instead, it produced a
+    structural break: some crimes fell sharply, some became more visible afterward, and daily
+    patterns shifted. Together, these changes suggest that the pandemic reshaped the structure
+    of crime rather than affecting all crimes in the same way.
+</p>
+
+<div class="section">
+    <h2>1. A structural break: crime did not evolve uniformly</h2>
+
+    <img src="images/yearly_crime_trends.png" alt="Yearly crime trends in San Francisco">
+
+    <p class="caption">
+        Figure 1. Yearly recorded incidents for theft, vehicle theft, and drug offense.
+        Theft drops sharply in 2020, while vehicle theft rises afterward, highlighting
+        diverging responses across crime categories.
     </p>
 
     <p>
-        The main idea is that COVID did not simply reduce crime. Instead, it seems to have
-        changed its shape: some categories dropped sharply, others became more visible after
-        2020, and daily timing patterns also shifted. At the same time, this dataset reflects
-        recorded incidents, not all crime, so reporting and policing practices must also be
-        kept in mind.
+        The first figure reveals a clear structural break around 2020. Theft, which had been
+        rising before the pandemic, drops sharply at the onset of COVID-19. Vehicle theft behaves
+        very differently, increasing in the following years, while drug offenses continue a longer
+        downward trend.
     </p>
 
-    <div class="section">
-        <h2>1. A clear break around 2020</h2>
+    <p>
+        This divergence matters. If the pandemic had simply reduced all crime, we would expect all
+        curves to move in roughly the same direction. Instead, the figure suggests that COVID-19
+        redistributed crime across categories. Changes in mobility, public activity, commuting,
+        and economic conditions likely affected different crime types in different ways.
+    </p>
+</div>
 
-        <img src="images/yearly_crime_trends.png" alt="Yearly crime trends in San Francisco">
+<div class="section">
+    <h2>2. Crime did not spread evenly across the city</h2>
 
-        <p class="caption">
-            Figure 1. Yearly recorded incidents for theft, vehicle theft, and drug offense.
-            Theft drops sharply in 2020, while vehicle theft rises afterward. This suggests
-            that the pandemic period changed crime patterns rather than simply lowering all crime equally.
-        </p>
+    <iframe src="visualizations/theft_map.html"></iframe>
 
-        <p>
-            The first figure shows a visible structural break around 2020. Theft, which had
-            been rising before the pandemic, falls sharply at the onset of COVID. Vehicle theft
-            behaves differently, increasing in the following years, while drug offense continues
-            a longer downward trend. This already suggests that the pandemic did not affect all
-            crime types in the same way.
-        </p>
-    </div>
+    <p class="caption">
+        Figure 2. Geographic distribution of theft across San Francisco police districts.
+        A small number of districts account for a large share of incidents.
+    </p>
 
-    <div class="section">
-        <h2>2. Theft is concentrated in a few districts</h2>
+    <p>
+        The spatial distribution of theft is clearly uneven. A relatively small number of districts
+        account for a much larger share of recorded incidents, while other parts of the city remain
+        far less affected. This suggests that theft is tied to specific urban environments rather
+        than distributed uniformly across San Francisco.
+    </p>
 
-        <iframe src="visualizations/theft_map.html"></iframe>
+    <p>
+        This is important for the overall story. The pandemic changed total crime levels, but crime
+        still remained concentrated in already active areas. In other words, COVID appears to have
+        changed volume more than geography: the city did not become spatially uniform, and central
+        districts continued to concentrate a large share of theft incidents.
+    </p>
+</div>
 
-        <p class="caption">
-            Figure 2. Geographic distribution of theft across San Francisco police districts.
-            Theft is not evenly distributed: a small number of central districts account for a
-            much larger share of recorded incidents.
-        </p>
+<div class="section">
+    <h2>3. Crime follows daily routines — and these shifted during COVID</h2>
 
-        <p>
-            The spatial picture is also uneven. Theft is concentrated in a limited set of
-            districts rather than spread uniformly across the city. This makes the pandemic
-            story more complex: changes in crime are not only about totals over time, but also
-            about where incidents remain concentrated.
-        </p>
-    </div>
+    <iframe src="visualizations/hourly_patterns.html"></iframe>
 
-    <div class="section">
-        <h2>3. Crime also has a daily rhythm</h2>
+    <p class="caption">
+        Figure 3. Hourly crime patterns before, during, and after COVID. Crime follows a daily rhythm,
+        with peaks later in the day and noticeable shifts during the pandemic period.
+    </p>
 
-        <iframe src="visualizations/hourly_patterns.html"></iframe>
+    <p>
+        The final figure adds the daily time dimension. Across all three categories, crime follows
+        a clear rhythm: incidents are relatively rare in the early morning, then rise from midday
+        into the afternoon and evening. This shows that crime is closely tied to ordinary daily
+        routines and patterns of urban activity.
+    </p>
 
-        <p class="caption">
-            Figure 3. Hourly crime patterns before, during, and after COVID. Incidents tend to
-            be less frequent in the early morning and more common from midday into the evening.
-            Differences across periods suggest that the pandemic also changed when incidents were recorded.
-        </p>
+    <p>
+        During the COVID period, however, these patterns shift. Some categories display sharper peaks
+        or different timing than before, which is consistent with the disruption of commuting, work
+        schedules, nightlife, and street activity during the pandemic. This suggests that COVID-19
+        changed not only how much crime was recorded, but also when it was most likely to occur.
+    </p>
+</div>
 
-        <p>
-            The final figure adds the time-of-day dimension. All three crime categories follow
-            a clear daily rhythm, with lower levels in the early morning and higher levels later
-            in the day. The overall shapes remain similar, but some shifts appear between the
-            pre-COVID, COVID, and post-COVID periods, which suggests that the pandemic affected
-            not only how much crime was recorded, but also when it appeared.
-        </p>
-    </div>
+<div class="section">
+    <h2>Conclusion</h2>
 
-    <div class="section">
-        <h2>Conclusion</h2>
+    <p>
+        Overall, the pandemic period looks like a turning point in San Francisco crime patterns.
+        Rather than simply reducing crime, COVID-19 reshaped it across several dimensions. We
+        observe a break in long-term trends, continued concentration in a few districts, and
+        noticeable changes in daily timing patterns.
+    </p>
 
-        <p>
-            Overall, the pandemic period looks like a turning point in San Francisco crime data.
-            It coincides with a sharp change in yearly totals, continued geographic concentration,
-            and noticeable differences in daily timing patterns.
-        </p>
+    <p>
+        These results also show why it is misleading to speak of “crime” as if it were one single
+        thing. Different categories respond differently to disruptions in mobility, routine activity,
+        and economic life. COVID-19 did not affect all crimes uniformly: it changed their relative
+        importance, their timing, and their visibility in the city.
+    </p>
 
-        <p>
-            Still, these results should be interpreted carefully. Police incident data measures
-            recorded incidents, not crime in some pure sense. Changes in mobility, reporting,
-            and policing can all shape what appears in the dataset. That is especially important
-            when discussing crime around a major disruption like COVID-19.
-        </p>
-    </div>
+    <p>
+        At the same time, police incident data captures recorded incidents, not all crime in some
+        pure sense. Reporting behavior, police presence, and enforcement practices also shape the
+        data. That matters especially when interpreting a major disruption like COVID-19.
+    </p>
+
+    <p>
+        In short, the pandemic did not make crime disappear. It changed where, when, and how it
+        appeared in San Francisco.
+    </p>
+</div>
+```
 
 </body>
 </html>
